@@ -83,7 +83,7 @@
         <div class="row">
 
             <div  id="main_workplace" class="col-lg-10" align="center">
-                <p id="title">Simulator</p>
+                <p id="title">TOS Simulator</p>
 
                 <div id="playBtn" class="btn-group" role="group">
                     <button id="normalDrag" class="btn btn-default btn-lg" onclick="toggleFreeDrag()">
@@ -118,11 +118,11 @@
                     <button class="btn btn-default btn-lg"onclick="replay()">
                         <span id="replay">Replay</span></button>
                     <button id="ShowReview" class="btn btn-default btn-lg"onclick="toggleReviewPath()">
-                        <span>Show Path</span></button>
-                    <button id="CloseReview" class="btn btn-default btn-lg"onclick="toggleReviewPath()" style="display: none;">
                         <span>Hide Path</span></button>
+                    <button id="CloseReview" class="btn btn-default btn-lg"onclick="toggleReviewPath()" style="display: none;">
+                        <span>Show Path</span></button>
 
-                    <select id="speedSelect" class="selectpicker" data-width="160px" title="Replay Speed" >
+                    <select id="speedSelect" class="selectpicker" data-width="180px" title="Replay Speed" >
                       <option value="2400" >1/160</option>
                       <option value="1200" >1/80</option>
                       <option value="900"  >1/60</option>
@@ -374,7 +374,7 @@
                     <span>Edit Team</span>
                 </button>
                 <button id="CloseTeam" onclick="closeEditTeam()" class="btn btn-default btn-lg" style="display: none;">
-                    <span>Close Edit Team</span>
+                    <span>Hide</span>
                 </button>
                 <button id="OpenSysInfo" onclick="toggleSystemInfomation()" class="btn btn-default btn-lg" style="display: none;">
                     <span>Show Team Information</span>
