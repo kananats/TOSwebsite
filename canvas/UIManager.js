@@ -1,4 +1,4 @@
-
+﻿
 // =================================================================
 // 時間/血條
 // =================================================================
@@ -111,9 +111,9 @@ var ComboManager = function( scrollbar, comboInfo, historyManager ){
     }
     this.addWave = function( waveNum ){
         if( waveNum == 0 ){
-            self.comboBox.append( $("<div align='center'>首消</div><hr>").addClass("comboLabel") );
+            self.comboBox.append( $("<div align='center'>First Batch</div><hr>").addClass("comboLabel") );
         }else if( waveNum == 1 ){
-            self.comboBox.append( $("<div align='center'>落消</div><hr>").addClass("comboLabel") );
+            self.comboBox.append( $("<div align='center'>Skydrop</div><hr>").addClass("comboLabel") );
         }
     };
 
