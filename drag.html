@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="louisalflame">
 
-    <title>Tower of Saviors 神魔之塔 卡片圖鑑表</title>
+    <title>Tower of Saviors Card Chart</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -28,15 +28,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-74512169-1', 'auto');
-      ga('send', 'pageview');
-    </script>
 
     <!--
 
@@ -52,14 +43,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container" >
             <div class="navbar-header" >
-                <a class="navbar-brand" href="index.html">Tower of Saviors 神魔之塔</a>
+                <a class="navbar-brand" href="index.html">Tower of Saviors</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="nav-bar-li">
-                    <a href="table.html">卡片圖鑑表</a>
+                    <a href="table.html">Card Chart</a>
                 </li>
                 <li class="active nav-bar-li">
-                    <a href="drag.html">轉珠模擬器</a>
+                    <a href="drag.html">Simulator</a>
                 </li>
                 <li class="nav-bar-li">
                     <a >Coming so...on</a>
@@ -72,8 +63,8 @@
                 <button type="button" class="btn btn-default" onclick="scroll_bottom()">
                     <span class="glyphicon glyphicon-chevron-down" ></span>
                 </button>
-                <input type="button" id="upload" value="儲存紀錄" onclick="download()" class="btn btn-default">
-                <input type="file" id="file" onclick=" " class="filestyle" data-input="false" data-icon="false" data-buttonText="讀取紀錄" >
+                <input type="button" id="upload" value="Record" onclick="download()" class="btn btn-default">
+                <input type="file" id="file" onclick=" " class="filestyle" data-input="false" data-icon="false" data-buttonText="View Record" >
                 <button type="button" class="btn btn-default" onclick="hide_navbar()">
                     <span class="glyphicon glyphicon-remove" ></span>
                 </button>
@@ -92,59 +83,59 @@
         <div class="row">
 
             <div  id="main_workplace" class="col-lg-10" align="center">
-                <p id="title">轉珠模擬器</p>
+                <p id="title">Simulator</p>
 
                 <div id="playBtn" class="btn-group" role="group">
                     <button id="normalDrag" class="btn btn-default btn-lg" onclick="toggleFreeDrag()">
-                        <span >一般移動</span></button>
+                        <span >Normal Move</span></button>
                     <button id="freeDrag" class="btn btn-default btn-lg" onclick="toggleFreeDrag()" style="display: none;">
-                        <span>自由移動</span></button>
+                        <span>Unlimited Move</span></button>
 
                     <button id="timeLimit" class="btn btn-default btn-lg" onclick="toggleTimeLimit()">
-                        <span>限制時間</span></button>
+                        <span>Time Limit</span></button>
                     <button id="timeNoLimit" class="btn btn-default btn-lg" onclick="toggleTimeLimit()" style="display: none;">
-                        <span>無限時間</span></button>
+                        <span>No Time Limit</span></button>
                     <input type="number" id="timeRange" value="5" max="60" min="1" class="btn btn-default btn-lg">
 
                     <button id="Dropable" class="btn btn-default btn-lg" onclick="toggleDropable()">
-                        <span>取消落珠</span></button>
+                        <span>No Drop</span></button>
                     <button id="NoDropable" class="btn btn-default btn-lg" onclick="toggleDropable()" style="display: none;">
-                        <span>隨機落珠</span></button>
+                        <span>Drop</span></button>
 
                     <button id="NoAudio" class="btn btn-default btn-lg" onclick="toggleAudio()" style="display: none;">
-                        <span>關閉音效</span></button>
+                        <span>Sound Off</span></button>
                     <button id="PlayAudio" class="btn btn-default btn-lg" onclick="toggleAudio()">
-                        <span>播放音效</span></button>
+                        <span>Sound On</span></button>
                 </div>
                 <br><br>
 
                 <div id="reviewBtn" class="btn-group" role="group">
                     <button class="btn btn-default btn-lg" onclick="initialPlain()">
-                        <span id="initial">初始版面</span></button>
+                        <span id="initial">Initial Layout</span></button>
                     <button class="btn btn-default btn-lg"onclick="finalPlain()">
-                        <span id="final">最終版面</span></button>
+                        <span id="final">Final Layout</span></button>
 
                     <button class="btn btn-default btn-lg"onclick="replay()">
-                        <span id="replay">重播紀錄</span></button>
+                        <span id="replay">Replay</span></button>
                     <button id="ShowReview" class="btn btn-default btn-lg"onclick="toggleReviewPath()">
-                        <span>顯示軌跡</span></button>
+                        <span>Show Path</span></button>
                     <button id="CloseReview" class="btn btn-default btn-lg"onclick="toggleReviewPath()" style="display: none;">
-                        <span>隱藏軌跡</span></button>
+                        <span>Hide Path</span></button>
 
-                    <select id="speedSelect" class="selectpicker" data-width="130px" title="重播速度" >
-                      <option value="2400" >龜速</option>
-                      <option value="1200" >極慢</option>
-                      <option value="900"  >緩慢</option>
-                      <option value="600"  >中等</option>
-                      <option value="450"  >正常</option>
-                      <option value="300"  >快速</option>
-                      <option value="150"  >極快</option>
-                      <option value="60"   >須臾</option>
-                      <option value="15"   >剎那</option>
+                    <select id="speedSelect" class="selectpicker" data-width="130px" title="Replay Speed" >
+                      <option value="2400" >1/160</option>
+                      <option value="1200" >1/80</option>
+                      <option value="900"  >1/60</option>
+                      <option value="600"  >1/40</option>
+                      <option value="450"  >1/30</option>
+                      <option value="300"  >1/20</option>
+                      <option value="150"  >1/10</option>
+                      <option value="60"   >1/4</option>
+                      <option value="15"   >1</option>
                     </select>
                 </div>
                     <button id="clipboard"  class="btn btn-danger btn-lg" data-clipboard-text="null" >
-                        <span> &nbsp;產生網址&nbsp;</span>
+                        <span>Generate URL</span>
                     </button>
                 <br><br>
 
@@ -160,33 +151,33 @@
                     </tr>
                     <tr id="MemberTypeSelectTD" >
                         <td> 
-                            <select id="TeamLeaderTypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamLeaderSelect">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                            <select id="TeamLeaderTypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="Choose Race" multiple action="TeamLeaderSelect">
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select> 
                         </td>
                         <td> 
                             <select id="TeamMember1TypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamMember1Select">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select>
                         </td>
                         <td> 
                             <select id="TeamMember2TypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamMember2Select">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select>
                         </td>
                         <td> 
                             <select id="TeamMember3TypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamMember3Select">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select> 
                         </td>
                         <td> 
                             <select id="TeamMember4TypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamMember4Select">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select>
                         </td>
                         <td> 
                             <select id="TeamFriendTypeSelect" class="selectpicker TeamMemberTypeSelect" data-width="120px" title="選擇種族" multiple action="TeamFriendSelect">
-                              <option value="GOD" >神族</option><option value="HUMAN" >人類</option><option value="DEVIL" >魔族</option><option value="BEAST" >獸類</option><option value="SPIRIT" >妖精</option><option value="DRAGON" >龍族</option><option value="CREATURE" >自創</option>
+                              <option value="GOD" >God</option><option value="HUMAN" >Human</option><option value="DEVIL" >Demon</option><option value="BEAST" >Beast</option><option value="SPIRIT" >Elf</option><option value="DRAGON" >Dragon</option><option value="CREATURE" >Custom</option>
                             </select>
                         </td>
                     </tr>
@@ -237,7 +228,7 @@
 
                 <table id="SystemInfomation" style="display: none;">
                     <tr >
-                        <th> <span > 資訊 </span>  </th>
+                        <th> <span > Information </span>  </th>
                         <td colspan="6"> 
                             <div id="BattleInfomationScrollbar" class="content mCustomScrollbar">
                                 <div id="BattleInfomation"></div>
@@ -245,22 +236,22 @@
                         </td>
                     </tr>
                     <tr id="LabelInfomation">
-                        <th> <span >名稱</span> </th>
+                        <th> <span >Name</span> </th>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                     </tr>
                     <tr id="HealthInfomation">
-                        <th> <span>生命力</span> </th>
+                        <th> <span>HP</span> </th>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                     </tr>
                     <tr id="AttackInfomation">
-                        <th> <span>攻擊力</span> </th>
+                        <th> <span>Attack</span> </th>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                     </tr>
                     <tr id="RecoveryInfomation">
-                        <th> <span>回復力</span> </th>
+                        <th> <span>Recovery</span> </th>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                     </tr>
@@ -285,11 +276,11 @@
                         <td><span></span></td> <td><span></span></td> <td><span></span></td>
                     </tr>
                     <tr id="ActiveSkillInfomation">
-                        <th> <span> 主動技 </span> </th>
+                        <th> <span> Active Skill </span> </th>
                         <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
                     </tr>
                     <tr id="LeaderSkillInfomation">
-                        <th> <span> 隊長技 </span> </th>
+                        <th> <span> Leader Skill </span> </th>
                         <td colspan="3"> 
                             <span onclick="$('#LeaderSkillInfo').toggle()" class="labelInfo"></span> <br>
                             <span id="LeaderSkillInfo" style="display: none;"></span>
@@ -300,7 +291,7 @@
                         </td>
                     </tr>
                     <tr id="TeamLeaderSkillInfomation">
-                        <th> <span> 隊伍技 </span> </th>
+                        <th> <span> Team Skill </span> </th>
                         <td id="TeamSkillInfoTD" colspan="6"> </td>
                     </tr>
                 </table>
@@ -308,27 +299,27 @@
 
                 <div id="panelButton" class="btn-group" role="group">
                     <button class="btn btn-default btn-lg" onclick="newRandomPlain()">
-                        <span id="randomPanel" >隨機版面</span> </button>
+                        <span id="randomPanel" >Random</span> </button>
                     <button id="OptionalPanel" class="btn btn-default btn-lg" onclick="newOptionalPlain()">
-                        <span>開始自選版面</span></button>
+                        <span>New Optional</span></button>
                     <button id="EndOptionalPanel" class="btn btn-default btn-lg" onclick="endOptionalPlain()" style="display: none;">
-                        <span >完成版面製作</span></button>
-                    <select id="colorSelect" class="selectpicker" data-width="150px" title="符石花色">
-                      <option value="w,f,p,l,d,h" >普通</option>
-                      <option value="w+,f+,p+,l+,d+,h+" >強化</option>
-                      <option value="w_,f_,p_,l_,d_,h_" >黑白普通</option>
-                      <option value="w+_,f+_,p+_,l+_,d+_,h+_" >黑白強化</option>
-                      <option value="wq,fq,pq,lq,dq,hq" >問號普通</option>
-                      <option value="w+q,f+q,p+q,l+q,d+q,h+q" >問號強化</option>
-                      <option value="wx,fx,px,lx,dx,hx" >風化普通</option>
-                      <option value="w+x,f+x,p+x,l+x,d+x,h+x" >風化強化</option>
-                      <option value="wX,fX,pX,lX,dX,hX" >隱藏風化普通</option>
-                      <option value="w+X,f+X,p+X,l+X,d+X,h+X" >隱藏風化強化</option>
-                      <option value="wk,fk,pk,lk,dk,hk" >鎖定</option>
-                      <option value="wi0,fi0,pi0,li0,di0,hi0" >冰凍0</option>
-                      <option value="wi1,fi1,pi1,li1,di1,hi1" >冰凍1</option>
-                      <option value="wi2,fi2,pi2,li2,di2,hi2" >冰凍2</option>
-                      <option value="wi3,fi3,pi3,li3,di3,hi3" >冰凍3</option>
+                        <span>End Optional</span></button>
+                    <select id="colorSelect" class="selectpicker" data-width="150px" title="Rune Type">
+                      <option value="w,f,p,l,d,h">Normal</option>
+                      <option value="w+,f+,p+,l+,d+,h+">Enchanted</option>
+                      <option value="w_,f_,p_,l_,d_,h_">Monochrome</option>
+                      <option value="w+_,f+_,p+_,l+_,d+_,h+_">Enchanted Monochrome</option>
+                      <option value="wq,fq,pq,lq,dq,hq">Question Mark</option>
+                      <option value="w+q,f+q,p+q,l+q,d+q,h+q">Enchanted Question Mark</option>
+                      <option value="wx,fx,px,lx,dx,hx">Weathered</option>
+                      <option value="w+x,f+x,p+x,l+x,d+x,h+x">Enchanted Weathered</option>
+                      <option value="wX,fX,pX,lX,dX,hX">Mine</option>
+                      <option value="w+X,f+X,p+X,l+X,d+X,h+X">Enchanted Mine</option>
+                      <option value="wk,fk,pk,lk,dk,hk">Lock</option>
+                      <option value="wi0,fi0,pi0,li0,di0,hi0">Frozen 0</option>
+                      <option value="wi1,fi1,pi1,li1,di1,hi1">Frozen 1</option>
+                      <option value="wi2,fi2,pi2,li2,di2,hi2">Frozen 2</option>
+                      <option value="wi3,fi3,pi3,li3,di3,hi3">Frozen 3</option>
                     </select>
                 </div><br>
                 <div id="panelControl" class="btn-group" role="group">
@@ -353,46 +344,46 @@
                 </div>
                 <br><br>
                     
-                <span class="teamLabel">進階選項：</span>
-                <select id="dropColorSelect" class="selectpicker" data-width="150px" title="落珠選擇">
-                    <option value="w,f,p,l,d,h" >正常分布</option>
-                    <option value="w,f,p,l,d" >禁心珠</option>
-                    <option value="MAP,h,w" >亡命感應 ‧ 水</option>
-                    <option value="MAP,h,f" >亡命感應 ‧ 火</option>
-                    <option value="MAP,h,p" >亡命感應 ‧ 木</option>
-                    <option value="MAP,h,l" >聖言詠歌</option>
-                    <option value="MAP,h,d" >夜言鳴曲</option>
-                    <option value="question" >問號掉落</option>
-                    <option value="optional" >自訂義</option>
+                <span class="teamLabel">Advanced Option：</span>
+                <select id="dropColorSelect" class="selectpicker" data-width="150px" title="Alter Drop Rate">
+                    <option value="w,f,p,l,d,h">Normal</option>
+                    <option value="w,f,p,l,d">No Heart</option>
+                    <option value="MAP,h,w">Heart to Water</option>
+                    <option value="MAP,h,f">Heart to Fire</option>
+                    <option value="MAP,h,p">Heart to Earth</option>
+                    <option value="MAP,h,l">Heart to Light</option>
+                    <option value="MAP,h,d">Heart to Dark</option>
+                    <option value="question">Question Mark</option>
+                    <option value="optional">Custom</option>
                 </select>
-                <select id="locusSelect" class="selectpicker" data-width="150px" title="軌跡選擇">
-                    <option value="null" >無軌跡</option>
-                    <option value="_" >軌跡黑白</option>
-                    <option value="_Inf" >持續軌跡黑白</option>
-                    <option value="q" >軌跡問號</option>
-                    <option value="qInf" >持續軌跡問號</option>
-                    <option value="fire" >軌跡燃燒</option>
-                    <option value="fireInf" >持續軌跡燃燒</option>
-                    <option value="rot" >軌跡腐蝕</option>
-                    <option value="rotInf" >持續軌跡腐蝕</option>
+                <select id="locusSelect" class="selectpicker" data-width="150px" title="Change Trail">
+                    <option value="null">No Trail</option>
+                    <option value="_">Monochrome Trail</option>
+                    <option value="_Inf">Permanent Monochrome Trail</option>
+                    <option value="q">Question Mark Trail</option>
+                    <option value="qInf">Permanent Question Mark Trail</option>
+                    <option value="fire">Burning Trail</option>
+                    <option value="fireInf">Permanent Burning Trail</option>
+                    <option value="rot">Erosive Trail</option>
+                    <option value="rotInf">Permanent Erosive Trail</option>
                 </select>
                 <br><br>
 
-                <span class="teamLabel">隊伍選項：</span>
+                <span class="teamLabel">Team Option:</span>
                 <button id="StartTeam" onclick="startEditTeam()" class="btn btn-default btn-lg">
-                    <span>開啟隊伍編輯</span>
+                    <span>Edit Team</span>
                 </button>
                 <button id="CloseTeam" onclick="closeEditTeam()" class="btn btn-default btn-lg" style="display: none;">
-                    <span>關閉隊伍編輯</span>
+                    <span>Close Edit Team</span>
                 </button>
                 <button id="OpenSysInfo" onclick="toggleSystemInfomation()" class="btn btn-default btn-lg" style="display: none;">
-                    <span>開啟隊伍資訊</span>
+                    <span>Show Team Information</span>
                 </button>
                 <button id="CloseSysInfo" onclick="toggleSystemInfomation()" class="btn btn-default btn-lg" style="display: none;">
-                    <span>關閉隊伍資訊</span>
+                    <span>Hide Team Information</span>
                 </button>
                 <button id="ActiveCoolDown" onclick="ActiveCoolDownToZero()" class="btn btn-default btn-lg" style="display: none;">
-                    <span>主動技快速冷卻</span>
+                    <span>Restore CD</span>
                 </button>
                 <br><br>
 
@@ -414,7 +405,7 @@
                 <div id="comboDiv">
                     <br>
                     <div id="comboHit" align="center">
-                      <span id="historyNum"></span> 步 <br>
+                      <span id="historyNum"></span> Move <br>
                       <span id="comboNum"></span><span id="extraCombo"></span> Combo <br>
                     </div>
                     <div id="Scrollbar" class="content mCustomScrollbar">
@@ -431,7 +422,9 @@
                 <div class="col-lg-12" align="center">
                     <img src="img/UI/logo.png" >
                     <p>Copyright &copy; louisalflame@PTT</p>
-                    <p>最後修改日期: 2016/06/24</p>
+                    <p>TBL.Kotori @RGK</p>
+                    <p>I am just the translator of the original work. All rights belong to their respective owners</p>
+					<p>Last Modified: 2018/03/16</p>
                 </div>
             </div>
         </footer>
