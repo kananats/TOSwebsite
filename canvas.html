@@ -52,7 +52,7 @@
 
             <div class="col-lg-3"></div>
             <div  id="main_workplace" class="col-lg-6" align="center">
-                <p id="title">Simulator</p>
+                <p id="title">TOS Simulator</p>
 
                 <canvas id="BarCanvas" ></canvas>
                 <br>
@@ -61,26 +61,26 @@
 
                 <div id="MainButton" class="btn-group" role="group">
                     <button id="Edit" class="btn btn-default btn-lg" onclick="setEditMode(this)">
-                        <span >Edit</span></button>
+                        <span>Board</span></button>
                     <button id="Team" class="btn btn-default btn-lg" onclick="setTeamMode(this)">
-                        <span >Team</span></button>
+                        <span>Team</span></button>
                     <button id="Move" class="btn btn-default btn-lg" onclick="setMoveMode(this)">
-                        <span >Move</span></button>
+                        <span>Play</span></button>
                     <button id="Replay" class="btn btn-default btn-lg" onclick="setReplayMode(this)">
-                        <span >Replay</span></button>
+                        <span>Replay</span></button>
                 </div><br><br>
 
                 <div id="EditModeButton">
                     <div id="PanelSelector">
                         <button class="btn btn-default btn-lg" onclick="randomPanel()">
-                            <span >Random</span></button>
+                            <span>Random</span></button>
                         <div class="btn-group" role="group">
                             <button class="btn btn-default btn-lg" onclick="savePanel(1, this)">
-                                <span >Save 1</span></button>
+                                <span>Save 1</span></button>
                             <button class="btn btn-default btn-lg" onclick="savePanel(2, this)">
-                                <span >Save 2</span></button>
+                                <span>Save 2</span></button>
                             <button class="btn btn-default btn-lg" onclick="savePanel(3, this)">
-                                <span >Save 3</span></button>
+                                <span>Save 3</span></button>
                         </div>
                     </div><br>
                     <div id="ColorSelector" class="btn-group" role="group">
@@ -109,21 +109,21 @@
                     </div><br>
                     <div id="ColorAttrSelector2" class="btn-group" role="group">
                         <button class="btn btn-default btn-lg" onclick="setColorAttr('unknown', this)">
-                            <span>Question</span></button>
+                            <span>Question Mark</span></button>
                         <button class="btn btn-default btn-lg" onclick="setColorAttr('reverse', this)">
                             <span>Monochrome</span></button>
                         <button class="btn btn-default btn-lg" onclick="setColorAttr('inhibit', this)">
                             <span>Mine</span></button>
                         <button class="btn btn-default btn-lg" onclick="setColorAttr('phantom', this)">
-                            <span>Illusion</span></button>
+                            <span>Shrouded</span></button>
                     </div><br><br>
 
                     <div id="DropAttrSetting" class="btn-group" role="group">
                         <button class="btn btn-default btn-lg" onclick="setNewDrop(this)">
-                            <span >Drop</span></button>
+                            <span>Enable Skydrop</span></button>
                         <button class="btn btn-default btn-lg" onclick="resetRandom(this)">
-                            <span >Reset Seed</span></button>
-                        <select id="DropColorSelector" class="selectpicker" data-width="150px" title="Drop Alteration" onchange="selectDropColor(this)">
+                            <span>Enable Obstacle Skydrop</span></button>
+                        <select id="DropColorSelector" class="selectpicker" data-width="180px" title="Change Drop Rate" onchange="selectDropColor(this)">
                             <option value="0">Normal</option>
                             <option value="1">No Heart</option>
                             <option value="2">Heart to Water</option>
@@ -191,15 +191,15 @@
                     
                     <div id="locusAttrSetting" class="btn-group" role="group">
                         <button class="btn btn-default btn-lg" onclick="setNewDrop(this)">
-                            <span>Drop</span></button>
+                            <span>Enable Skydrop</span></button>
                         <button class="btn btn-default btn-lg" onclick="setInfLocus(this)">
-                            <span>持續軌跡</span></button>
+                            <span>Permanent</span></button>
                         <select id="locusSelect" class="selectpicker" data-width="150px" title="Trail Option" onchange="setLocusMode(this)">
-                            <option value="0" >No Trail</option>
-                            <option value="1" >Monochrome Trail</option>
-                            <option value="2" >Question Trail</option>
-                            <option value="3" >Fire Trail</option>
-                            <option value="4" >Corrosive Trail</option>
+                            <option value="0">No Trail</option>
+                            <option value="1">Monochrome Trail</option>
+                            <option value="2">Question Trail</option>
+                            <option value="3">Burning Trail</option>
+                            <option value="4">Corrosive Trail</option>
                         </select>
                     </div>
                 </div>
