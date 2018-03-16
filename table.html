@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="louisalflame">
 
-    <title>Tower of Saviors 神魔之塔 卡片圖鑑表</title>
+    <title>Tower of Saviors Card Chart</title>
 
     <link rel="shortcut icon" href="tos.ico">
     <link rel="bookmark" href="tos.ico">
@@ -40,14 +40,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container" >
             <div class="navbar-header" >
-                <a class="navbar-brand" href="index.html">Tower of Saviors 神魔之塔</a>
+                <a class="navbar-brand" href="index.html">Tower of Saviors</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active nav-bar-li">
-                    <a href="table.html">卡片圖鑑表</a>
+                    <a href="table.html">Card Chart</a>
                 </li>
                 <li class="nav-bar-li">
-                    <a href="canvas.html">轉珠模擬器</a>
+                    <a href="canvas.html">Simulator</a>
                 </li>
                 <li class="nav-bar-li">
                     <a onclick="scroll_top()"><span class="glyphicon glyphicon-chevron-up" /></a>
@@ -56,10 +56,10 @@
                     <a onclick="scroll_bottom()"><span class="glyphicon glyphicon-chevron-down" /></a>
                 </li>
                 <li class="nav-bar-li">
-                    <input type="button" id="upload" value="儲存紀錄" onclick="download()" class="btn btn-default">
+                    <input type="button" id="upload" value="Record" onclick="download()" class="btn btn-default">
                 </li>
                 <li class="nav-bar-li">
-                    <input type="file" id="file" onclick=" " class="filestyle" data-input="false" data-icon="false" data-buttonText="讀取紀錄" >
+                    <input type="file" id="file" onclick=" " class="filestyle" data-input="false" data-icon="false" data-buttonText="Play Record" >
                 </li>
                 <li class="nav-bar-li">
                     <a onclick="hide_navbar()"><span class="glyphicon glyphicon-remove" /></a>
@@ -102,73 +102,73 @@
             <div class="row">
                 <div id="CtrlForm" class="col-lg-12 form-inline" align="center">
                     <div class="btn-group" role="group">
-                        <input type="button" id="twoCol" value="雙排格式" onclick="two_col()" class="btn btn-default">
-                        <input type="button" id="oneCol" value="單排格式" onclick="one_col()" style="display: none;" class="btn btn-default">
-                        <input type="button" id="allHide" value="全部隱藏" onclick="all_hide()" class="btn btn-default">
-                        <input type="button" id="allShow" value="全部顯示" onclick="all_show()" style="display: none;" class="btn btn-default">
-                        <input type="button" id="removeGray" value="隱藏灰階" onclick="remove_gray()" class="btn btn-default">
-                        <input type="button" id="showGray" value="顯示灰階" onclick="show_gray()" style="display: none;" class="btn btn-default">
-                        <input type="button" id="allColor" value="全部彩色" onclick="all_color()" class="btn btn-default">
-                        <input type="button" id="allGray" value="全部灰階" onclick="all_gray()" style="display: none;" class="btn btn-default">
-                        <input type="button" id="removeLabel" value="隱藏標籤" onclick="remove_label()" class="btn btn-default">
-                        <input type="button" id="showLabel" value="顯示標籤" onclick="show_label()" style="display: none;" class="btn btn-default">
+                        <input type="button" id="twoCol" value="Two Column" onclick="two_col()" class="btn btn-default">
+                        <input type="button" id="oneCol" value="One Column" onclick="one_col()" style="display: none;" class="btn btn-default">
+                        <input type="button" id="allHide" value="Hide All" onclick="all_hide()" class="btn btn-default">
+                        <input type="button" id="allShow" value="Show All" onclick="all_show()" style="display: none;" class="btn btn-default">
+                        <input type="button" id="removeGray" value="Remove Gray" onclick="remove_gray()" class="btn btn-default">
+                        <input type="button" id="showGray" value="Show Gray" onclick="show_gray()" style="display: none;" class="btn btn-default">
+                        <input type="button" id="allColor" value="All Color" onclick="all_color()" class="btn btn-default">
+                        <input type="button" id="allGray" value="All Gray" onclick="all_gray()" style="display: none;" class="btn btn-default">
+                        <input type="button" id="removeLabel" value="Hide Label" onclick="remove_label()" class="btn btn-default">
+                        <input type="button" id="showLabel" value="Show Label" onclick="show_label()" style="display: none;" class="btn btn-default">
                         <select id="levelSelect" class="selectpicker" data-width="fit">
-                          <option value="0" >Lv:最初級</option>
-                          <option value="1" >Lv:最高級</option>
-                          <option value="2" >Lv:漸進式</option>
+                          <option value="0" >Lv:Lowest</option>
+                          <option value="1" >Lv:Highest</option>
+                          <option value="2" >Lv:Progress</option>
                         </select>
                     </div>
                     <br><br>
                 </div> 
 
                 <div id="CtrlForm" class="col-lg-12 form-inline" align="center">
-                    <select id="raritySelect" class="selectpicker" data-width="150px" title="選擇稀有度" multiple>
-                      <option value="Material" >小兵/素材</option>
-                      <option value="Normal" >雙周/友抽</option>
-                      <option value="Special" >石抽系列</option>
-                      <option value="Boss" >地獄魔王</option>
-                      <option value="Activity" >公會活動</option>
+                    <select id="raritySelect" class="selectpicker" data-width="150px" title="Choose Rarity" multiple>
+                      <option value="Material" >Material</option>
+                      <option value="Normal" >Normal</option>
+                      <option value="Special" >Special</option>
+                      <option value="Boss" >Boss</option>
+                      <option value="Activity" >Event</option>
                     </select>
-                    <select id="typeSelect" class="selectpicker" data-width="150px" title="選擇種族" multiple>
-                      <option value="God" >神族</option>
-                      <option value="Human" >人類</option>
-                      <option value="Devil" >魔族</option>
-                      <option value="Beast" >獸類</option>
-                      <option value="Spirit" >妖精</option>
-                      <option value="Dragon" >龍族</option>
-                      <option value="Other" >混和系列</option>
+                    <select id="typeSelect" class="selectpicker" data-width="150px" title="Choose Race" multiple>
+                      <option value="God" >God</option>
+                      <option value="Human" >Human</option>
+                      <option value="Devil" >Demon</option>
+                      <option value="Beast" >Beast</option>
+                      <option value="Spirit" >Elf</option>
+                      <option value="Dragon" >Dragon</option>
+                      <option value="Other" >Other</option>
                     </select>
                     <div class="btn-group" role="group">
-                        <input type="button" id="selectHide" value="隱藏" onclick="select_hide()" class="btn btn-default">
-                        <input type="button" id="selectShow" value="顯示" onclick="select_show()" class="btn btn-default">
-                        <input type="button" id="selectColor" value="彩色" onclick="select_color()" class="btn btn-default">
-                        <input type="button" id="selectGray" value="灰階" onclick="select_gray()" class="btn btn-default">
+                        <input type="button" id="selectHide" value="Hide" onclick="select_hide()" class="btn btn-default">
+                        <input type="button" id="selectShow" value="Show" onclick="select_show()" class="btn btn-default">
+                        <input type="button" id="selectColor" value="Color" onclick="select_color()" class="btn btn-default">
+                        <input type="button" id="selectGray" value="Gray" onclick="select_gray()" class="btn btn-default">
                     </div>
                     <br><br>
                 </div> 
 
                 <div id="oneColForm" class="col-lg-12 form-inline" align="center">
                     <select id="trSelect" class="form-control" ></select>
-                    <input type="button" id="hideTr" value="隱藏" onclick="hide_tr()" class="btn btn-default">
+                    <input type="button" id="hideTr" value="Hide" onclick="hide_tr()" class="btn btn-default">
                     <div class="btn-group" role="group">
-                        <input type="button" id="upTr" value="上移" onclick="moveUp_tr()" class="btn btn-default">
-                        <input type="button" id="downTr" value="下移" onclick="moveDown_tr()" class="btn btn-default">
+                        <input type="button" id="upTr" value="Move Up" onclick="moveUp_tr()" class="btn btn-default">
+                        <input type="button" id="downTr" value="Move Down" onclick="moveDown_tr()" class="btn btn-default">
                     </div> 
                 </div>
                 <div id="twoColForm" class="col-lg-12 form-inline" align="center"  style="display: none;">
                     <select id="trSelect1" class="form-control"></select>
-                    <input type="button" id="hideTr1" value="隱藏" onclick="hide_tr1()" class="btn btn-default">
+                    <input type="button" id="hideTr1" value="Hide" onclick="hide_tr1()" class="btn btn-default">
                     <div class="btn-group" role="group">
-                        <input type="button" id="upTr1" value="上移" onclick="moveUp_tr1()" class="btn btn-default">
-                        <input type="button" id="downTr1" value="下移" onclick="moveDown_tr1()" class="btn btn-default">
-                        <input type="button" id="rightTr" value="右移" onclick="moveRight_tr()" class="btn btn-default">
+                        <input type="button" id="upTr1" value="Move Up" onclick="moveUp_tr1()" class="btn btn-default">
+                        <input type="button" id="downTr1" value="Move Down" onclick="moveDown_tr1()" class="btn btn-default">
+                        <input type="button" id="rightTr" value="Move Right" onclick="moveRight_tr()" class="btn btn-default">
                     </div> 
                     <select id="trSelect2" class="form-control"></select>
-                    <input type="button" id="hideTr2" value="隱藏" onclick="hide_tr2()" class="btn btn-default">
+                    <input type="button" id="hideTr2" value="Hide" onclick="hide_tr2()" class="btn btn-default">
                     <div class="btn-group" role="group">
-                        <input type="button" id="upTr2" value="上移" onclick="moveUp_tr2()" class="btn btn-default">
-                        <input type="button" id="downTr2" value="下移" onclick="moveDown_tr2()" class="btn btn-default">
-                        <input type="button" id="leftTr" value="左移" onclick="moveLeft_tr()" class="btn btn-default">
+                        <input type="button" id="upTr2" value="Move Up" onclick="moveUp_tr2()" class="btn btn-default">
+                        <input type="button" id="downTr2" value="Move Down" onclick="moveDown_tr2()" class="btn btn-default">
+                        <input type="button" id="leftTr" value="Move Left" onclick="moveLeft_tr()" class="btn btn-default">
                     </div> 
                 </div>
 

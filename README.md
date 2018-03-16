@@ -1,1 +1,1 @@
-# TOSwebsite.github.io
+# https://kananats.github.io/TOSwebsite/
